@@ -12,6 +12,7 @@ var polygon;
 var polygon_img;
 function preload(){
   polygon_img=loadImage("polygon.png");
+
 }
 function setup() {
   createCanvas(900,400);
@@ -120,4 +121,10 @@ function mouseDragged(){
 function mouseReleased(){
   slingShot.fly();
 
+}
+function keyPressed(){
+  if(keyCode===32){
+      slingShot.attach(this.hexa);
+  }
+  
 }
