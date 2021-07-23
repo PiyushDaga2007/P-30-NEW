@@ -14,20 +14,20 @@ class Block{
         var angle = this.body.angle;
         var pos= this.body.position;
         push();
-        translate(pos.x, pos.y);
-        rotate(angle);
+       // translate(pos.x, pos.y);
+        //rotate(angle);
         imageMode(CENTER);
         image(this.image,pos.x,pos.y,this.width, this.height);
         pop();
         if(this.body.speed<=3){
-         block.display();
+         
         }
         else{
           World.remove(world,this.body);
           push()
           this.visiblity-=5;
           tint(255,this.visiblity)
-          image(this.image,this.body.position.x,this.body.position.y,30,40)
+          image(this.image,pos.x,pos.y,30,40)
           pop()
         }
        
